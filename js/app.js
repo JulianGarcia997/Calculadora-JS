@@ -47,6 +47,43 @@ var Calculadora = {
     self.dividido.addEventListener("click",function(){self.dividir()})	
     self.punto.addEventListener("click",function(){self.ponerPunto()})	
     self.igual.addEventListener("click",function(){self.resultado()})
+    //efecto de click
+    self.on.addEventListener("mousedown",function(){self.on.style.transform="scale(0.9)"})
+    self.on.addEventListener("mouseup",function(){self.on.style.transform="scale(1)"})
+    self.sign.addEventListener("mousedown",function(){self.sign.style.transform="scale(0.9)"})
+    self.sign.addEventListener("mouseup",function(){self.sign.style.transform="scale(1)"})
+    self.tecla_0.addEventListener("mousedown",function(){self.tecla_0.style.transform="scale(0.9)"})
+    self.tecla_0.addEventListener("mouseup",function(){self.tecla_0.style.transform="scale(1)"})
+    self.tecla_1.addEventListener("mousedown",function(){self.tecla_1.style.transform="scale(0.9)"})
+    self.tecla_1.addEventListener("mouseup",function(){self.tecla_1.style.transform="scale(1)"})
+    self.tecla_2.addEventListener("mousedown",function(){self.tecla_2.style.transform="scale(0.9)"})
+    self.tecla_2.addEventListener("mouseup",function(){self.tecla_2.style.transform="scale(1)"})
+    self.tecla_3.addEventListener("mousedown",function(){self.tecla_3.style.transform="scale(0.9)"})
+    self.tecla_3.addEventListener("mouseup",function(){self.tecla_3.style.transform="scale(1)"})
+    self.tecla_4.addEventListener("mousedown",function(){self.tecla_4.style.transform="scale(0.9)"})
+    self.tecla_4.addEventListener("mouseup",function(){self.tecla_4.style.transform="scale(1)"})
+    self.tecla_5.addEventListener("mousedown",function(){self.tecla_5.style.transform="scale(0.9)"})
+    self.tecla_5.addEventListener("mouseup",function(){self.tecla_5.style.transform="scale(1)"})
+    self.tecla_6.addEventListener("mousedown",function(){self.tecla_6.style.transform="scale(0.9)"})
+    self.tecla_6.addEventListener("mouseup",function(){self.tecla_6.style.transform="scale(1)"})
+    self.tecla_7.addEventListener("mousedown",function(){self.tecla_7.style.transform="scale(0.9)"})
+    self.tecla_7.addEventListener("mouseup",function(){self.tecla_7.style.transform="scale(1)"})
+    self.tecla_8.addEventListener("mousedown",function(){self.tecla_8.style.transform="scale(0.9)"})
+    self.tecla_8.addEventListener("mouseup",function(){self.tecla_8.style.transform="scale(1)"})
+    self.tecla_9.addEventListener("mousedown",function(){self.tecla_9.style.transform="scale(0.9)"})
+    self.tecla_9.addEventListener("mouseup",function(){self.tecla_9.style.transform="scale(1)"})
+    self.mas.addEventListener("mousedown",function(){self.mas.style.transform="scale(0.9)"})
+    self.mas.addEventListener("mouseup",function(){self.mas.style.transform="scale(1)"})
+    self.menos.addEventListener("mousedown",function(){self.menos.style.transform="scale(0.9)"})
+    self.menos.addEventListener("mouseup",function(){self.menos.style.transform="scale(1)"})
+    self.por.addEventListener("mousedown",function(){self.por.style.transform="scale(0.9)"})
+    self.por.addEventListener("mouseup",function(){self.por.style.transform="scale(1)"})
+    self.dividido.addEventListener("mousedown",function(){self.dividido.style.transform="scale(0.9)"})
+    self.dividido.addEventListener("mouseup",function(){self.dividido.style.transform="scale(1)"})
+    self.punto.addEventListener("mousedown",function(){self.punto.style.transform="scale(0.9)"})
+    self.punto.addEventListener("mouseup",function(){self.punto.style.transform="scale(1)"})
+    self.igual.addEventListener("mousedown",function(){self.igual.style.transform="scale(0.9)"})
+    self.igual.addEventListener("mouseup",function(){self.igual.style.transform="scale(1)"})
   },
 
   llenarDisplay:function(numero){
@@ -57,6 +94,7 @@ var Calculadora = {
     else if(self.display.innerHTML.length<8){
       self.display.innerHTML+=numero   
     }
+
   },
 
   resetear:function(){
@@ -67,14 +105,14 @@ var Calculadora = {
   sumar:function(){
     var self=this
     self.suma=true
-    self.numero_1=self.display.innerHTML
+    self.numero_1+=parseInt(self.display.innerHTML)
     self.display.innerHTML=''	
   },
 
   restar:function(){
     var self=this
     self.resta=true
-    self.numero_1=self.display.innerHTML
+    self.numero_1=parseInt(self.display.innerHTML)
     self.display.innerHTML=''	
   },
 
@@ -147,9 +185,9 @@ var Calculadora = {
         resultado=parseInt(self.numero_1)/parseInt(self.display.innerHTML)
         self.display.innerHTML=resultado
         self.division=false
-      }	
-      	
+      }	 	
     }	
+    self.numero_1=0;
   }
 }
 
